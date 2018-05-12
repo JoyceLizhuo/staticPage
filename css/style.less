@@ -1,0 +1,71 @@
+/***** 方案1 浮动 *****/
+.container{
+  width: 100%;
+  min-width: 300px;
+  overflow: hidden;
+  .item{
+    width: 33.33%;
+    min-width: 100px;
+    float: left;
+    .card{
+      width: 100px;
+      margin: 10px auto;
+      box-sizing: border-box;
+      padding: 4px;
+      border: 1px solid #dedede;
+      img.cardImg{
+        width: 90px;
+        height: 90px;
+      }
+      .cardTitle{
+        text-align: center;
+      }
+    }
+  }
+
+}
+/*****方案2 flex ****/
+.fContainer{
+  display: flex;
+  flex-wrap: wrap;
+  just-content: space-around;
+  width: 100%;
+  min-width: 300px;
+  .item{
+    width: 33.33%;
+    min-width: 100px;
+    .card{
+      width: 100px;
+      margin: 10px auto;
+      box-sizing: border-box;
+      padding: 4px;
+      border: 1px solid #dedede;
+      img.cardImg{
+        width: 90px;
+        height: 90px;
+      }
+      .cardTitle{
+        text-align: center;
+      }
+    }
+  }
+
+}
+/****3.grid***/
+.gContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .card{
+    width: 100px;
+    padding: 4px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    border: 1px solid #dedede;
+    .cardImg{
+      width: 90px;
+    }
+    .cardTitle{
+      text-aligin: center;
+    }
+  }
+}
